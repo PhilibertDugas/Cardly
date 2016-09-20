@@ -3,7 +3,7 @@
 //  CardlyUITests
 //
 //  Created by Philibert Dugas on 2016-09-20.
-//  Copyright © 2016 Cardly. All rights reserved.
+//  Copyright © 2016 QH4L. All rights reserved.
 //
 
 import XCTest
