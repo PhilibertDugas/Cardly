@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D31477E2EB69F4D9BD42BCE /* Pods_CardlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD944E996C39DCAD6F2883FD /* Pods_CardlyTests.framework */; };
 		4537D6BB1D922B35009F33DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4537D6BA1D922B35009F33DD /* GoogleService-Info.plist */; };
 		4537D6BD1D922D0A009F33DD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4537D6BC1D922D0A009F33DD /* AppState.swift */; };
 		4537D6BF1D922D97009F33DD /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4537D6BE1D922D97009F33DD /* Contants.swift */; };
@@ -20,10 +19,7 @@
 		456143691D91C2DF007690B9 /* CardlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456143681D91C2DF007690B9 /* CardlyUITests.swift */; };
 		458D59B51D9367D800CD1208 /* Exterior-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 458D59B41D9367D800CD1208 /* Exterior-30.png */; };
 		458D59B71D93680B00CD1208 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458D59B61D93680B00CD1208 /* HomeViewController.swift */; };
-		458D59B91D93685B00CD1208 /* BeaconAdvertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458D59B81D93685B00CD1208 /* BeaconAdvertiser.swift */; };
 		458D59BB1D936D3800CD1208 /* BeaconListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458D59BA1D936D3800CD1208 /* BeaconListener.swift */; };
-		CA2823A32E1F661CAC2CF1BB /* Pods_Cardly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C32098BD1AD5B93D41F1031 /* Pods_Cardly.framework */; };
-		E1883B11B6DE0A78F40B61B0 /* Pods_CardlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDE1FDDA5E510D3DD40C22B /* Pods_CardlyUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1EDE1FDDA5E510D3DD40C22B /* Pods_CardlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4537D6BA1D922B35009F33DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4537D6BC1D922D0A009F33DD /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		4537D6BE1D922D97009F33DD /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
@@ -63,13 +58,10 @@
 		4561436A1D91C2DF007690B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		458D59B41D9367D800CD1208 /* Exterior-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Exterior-30.png"; sourceTree = "<group>"; };
 		458D59B61D93680B00CD1208 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		458D59B81D93685B00CD1208 /* BeaconAdvertiser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconAdvertiser.swift; sourceTree = "<group>"; };
 		458D59BA1D936D3800CD1208 /* BeaconListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconListener.swift; sourceTree = "<group>"; };
 		47A4BA372C6BF0BE27072830 /* Pods-CardlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardlyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardlyUITests/Pods-CardlyUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4C32098BD1AD5B93D41F1031 /* Pods_Cardly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cardly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58469818394FDC2C24E0497B /* Pods-CardlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardlyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardlyUITests/Pods-CardlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		622BD7346AA59277B70C9C88 /* Pods-CardlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardlyTests/Pods-CardlyTests.release.xcconfig"; sourceTree = "<group>"; };
-		AD944E996C39DCAD6F2883FD /* Pods_CardlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5C32983BF88C27EA833E73 /* Pods-Cardly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cardly/Pods-Cardly.release.xcconfig"; sourceTree = "<group>"; };
 		C08F3B634AD09EA12E8414B8 /* Pods-CardlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardlyTests/Pods-CardlyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ECBBAFF78B2D6651F90E7D23 /* Pods-Cardly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cardly/Pods-Cardly.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,7 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA2823A32E1F661CAC2CF1BB /* Pods_Cardly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D31477E2EB69F4D9BD42BCE /* Pods_CardlyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +86,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1883B11B6DE0A78F40B61B0 /* Pods_CardlyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +120,6 @@
 				456143481D91C2DF007690B9 /* AppDelegate.swift */,
 				4561434A1D91C2DF007690B9 /* LoginViewController.swift */,
 				458D59B61D93680B00CD1208 /* HomeViewController.swift */,
-				458D59B81D93685B00CD1208 /* BeaconAdvertiser.swift */,
 				458D59BA1D936D3800CD1208 /* BeaconListener.swift */,
 				4537D6BC1D922D0A009F33DD /* AppState.swift */,
 				4537D6BE1D922D97009F33DD /* Contants.swift */,
@@ -166,9 +154,6 @@
 		537139A943C0CB48C9F9CB5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4C32098BD1AD5B93D41F1031 /* Pods_Cardly.framework */,
-				AD944E996C39DCAD6F2883FD /* Pods_CardlyTests.framework */,
-				1EDE1FDDA5E510D3DD40C22B /* Pods_CardlyUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -454,7 +439,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				458D59B91D93685B00CD1208 /* BeaconAdvertiser.swift in Sources */,
 				458D59B71D93680B00CD1208 /* HomeViewController.swift in Sources */,
 				4537D6BD1D922D0A009F33DD /* AppState.swift in Sources */,
 				458D59BB1D936D3800CD1208 /* BeaconListener.swift in Sources */,

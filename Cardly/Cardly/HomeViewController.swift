@@ -7,18 +7,19 @@
 //
 
 import UIKit
+import CoreLocation
+import CoreBluetooth
 
-class HomeViewController: UIViewController {
-
+class HomeViewController: UIViewController, CBPeripheralManagerDelegate {
+    let regionUUID = UUID(uuidString: Constants.Bluetooth.RegionUUID)!
+    
+    var advertisedData = NSDictionary()
+    var beaconRegion: CLBeaconRegion!
+    var peripheralManager: CBPeripheralManager!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let beaconListener = BeaconListener.init()
-        let beaconAdvertiser = BeaconAdvertiser.init(minor: UInt16(1), major: UInt16(1))
-        beaconListener.startMonitoring()
-        beaconAdvertiser.startAdvertising()
-
-        // Do any additional setup after loading the view.
+        launchBluetoothDevice()
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,15 +27,29 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func launchBluetoothDevice() {
+        let beaconListener = BeaconListener.init()
+        beaconListener.startMonitoring()
+        
+        beaconRegion = CLBeaconRegion(proximityUUID: regionUUID, major: 1, minor: 1, identifier: Constants.Bluetooth.BeaconIdentifier)
+        advertisedData = beaconRegion.peripheralData(withMeasuredPower: nil)
+        peripheralManager = CBPeripheralManager.init(delegate: self, queue: nil)
     }
-    */
+    
+    func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
+        switch peripheral.state {
+        case CBManagerState.poweredOn:
+            print("Bluetooth is powered on")
+            self.peripheralManager.startAdvertising(self.advertisedData as? [String : AnyObject])
+        case CBManagerState.poweredOff:
+            print("Bluetooth is powered off")
+        default:
+            print("nothing")
+        }
+    }
+    
+    func peripheralManagerDidStartAdvertising(_ peripheral: CBPeripheralManager, error: Error?) {
+        print("Started advertising minor: \(beaconRegion.minor) major: \(beaconRegion.major)")
+    }
 
 }
