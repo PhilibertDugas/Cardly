@@ -18,6 +18,10 @@
 		456143531D91C2DF007690B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456143511D91C2DF007690B9 /* LaunchScreen.storyboard */; };
 		4561435E1D91C2DF007690B9 /* CardlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561435D1D91C2DF007690B9 /* CardlyTests.swift */; };
 		456143691D91C2DF007690B9 /* CardlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456143681D91C2DF007690B9 /* CardlyUITests.swift */; };
+		458D59B51D9367D800CD1208 /* Exterior-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 458D59B41D9367D800CD1208 /* Exterior-30.png */; };
+		458D59B71D93680B00CD1208 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458D59B61D93680B00CD1208 /* HomeViewController.swift */; };
+		458D59B91D93685B00CD1208 /* BeaconAdvertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458D59B81D93685B00CD1208 /* BeaconAdvertiser.swift */; };
+		458D59BB1D936D3800CD1208 /* BeaconListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458D59BA1D936D3800CD1208 /* BeaconListener.swift */; };
 		CA2823A32E1F661CAC2CF1BB /* Pods_Cardly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C32098BD1AD5B93D41F1031 /* Pods_Cardly.framework */; };
 		E1883B11B6DE0A78F40B61B0 /* Pods_CardlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDE1FDDA5E510D3DD40C22B /* Pods_CardlyUITests.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +61,10 @@
 		456143641D91C2DF007690B9 /* CardlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		456143681D91C2DF007690B9 /* CardlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardlyUITests.swift; sourceTree = "<group>"; };
 		4561436A1D91C2DF007690B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		458D59B41D9367D800CD1208 /* Exterior-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Exterior-30.png"; sourceTree = "<group>"; };
+		458D59B61D93680B00CD1208 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		458D59B81D93685B00CD1208 /* BeaconAdvertiser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconAdvertiser.swift; sourceTree = "<group>"; };
+		458D59BA1D936D3800CD1208 /* BeaconListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconListener.swift; sourceTree = "<group>"; };
 		47A4BA372C6BF0BE27072830 /* Pods-CardlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardlyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardlyUITests/Pods-CardlyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4C32098BD1AD5B93D41F1031 /* Pods_Cardly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cardly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58469818394FDC2C24E0497B /* Pods-CardlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardlyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardlyUITests/Pods-CardlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,13 +130,17 @@
 			children = (
 				456143481D91C2DF007690B9 /* AppDelegate.swift */,
 				4561434A1D91C2DF007690B9 /* LoginViewController.swift */,
+				458D59B61D93680B00CD1208 /* HomeViewController.swift */,
+				458D59B81D93685B00CD1208 /* BeaconAdvertiser.swift */,
+				458D59BA1D936D3800CD1208 /* BeaconListener.swift */,
 				4537D6BC1D922D0A009F33DD /* AppState.swift */,
+				4537D6BE1D922D97009F33DD /* Contants.swift */,
 				4561434C1D91C2DF007690B9 /* Main.storyboard */,
-				4561434F1D91C2DF007690B9 /* Assets.xcassets */,
 				456143511D91C2DF007690B9 /* LaunchScreen.storyboard */,
 				456143541D91C2DF007690B9 /* Info.plist */,
 				4537D6BA1D922B35009F33DD /* GoogleService-Info.plist */,
-				4537D6BE1D922D97009F33DD /* Contants.swift */,
+				458D59B41D9367D800CD1208 /* Exterior-30.png */,
+				4561434F1D91C2DF007690B9 /* Assets.xcassets */,
 			);
 			path = Cardly;
 			sourceTree = "<group>";
@@ -294,6 +306,7 @@
 				4537D6BB1D922B35009F33DD /* GoogleService-Info.plist in Resources */,
 				456143501D91C2DF007690B9 /* Assets.xcassets in Resources */,
 				4561434E1D91C2DF007690B9 /* Main.storyboard in Resources */,
+				458D59B51D9367D800CD1208 /* Exterior-30.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +454,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				458D59B91D93685B00CD1208 /* BeaconAdvertiser.swift in Sources */,
+				458D59B71D93680B00CD1208 /* HomeViewController.swift in Sources */,
 				4537D6BD1D922D0A009F33DD /* AppState.swift in Sources */,
+				458D59BB1D936D3800CD1208 /* BeaconListener.swift in Sources */,
 				4561434B1D91C2DF007690B9 /* LoginViewController.swift in Sources */,
 				456143491D91C2DF007690B9 /* AppDelegate.swift in Sources */,
 				4537D6BF1D922D97009F33DD /* Contants.swift in Sources */,
@@ -606,6 +622,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qh4l.Cardly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -621,6 +638,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qh4l.Cardly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

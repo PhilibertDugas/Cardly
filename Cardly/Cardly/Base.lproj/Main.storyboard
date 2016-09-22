@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="2002" y="458"/>
         </scene>
-        <!--Item 1-->
+        <!--Home-->
         <scene sceneID="fek-W0-ebs">
             <objects>
-                <viewController id="dFE-rE-HZc" sceneMemberID="viewController">
+                <viewController id="dFE-rE-HZc" customClass="HomeViewController" customModule="Cardly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="osh-zY-zNT"/>
                         <viewControllerLayoutGuide type="bottom" id="86O-AA-9hz"/>
@@ -124,7 +124,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="v4p-VT-CvO"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Exterior-30.png" id="v4p-VT-CvO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KyQ-JD-b2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -149,4 +149,7 @@
             <point key="canvasLocation" x="1052" y="131"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Exterior-30.png" width="30" height="30"/>
+    </resources>
 </document>
