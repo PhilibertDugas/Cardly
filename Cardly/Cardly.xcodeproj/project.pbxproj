@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0D31477E2EB69F4D9BD42BCE /* Pods_CardlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD944E996C39DCAD6F2883FD /* Pods_CardlyTests.framework */; };
+		4537D6BB1D922B35009F33DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4537D6BA1D922B35009F33DD /* GoogleService-Info.plist */; };
+		4537D6BD1D922D0A009F33DD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4537D6BC1D922D0A009F33DD /* AppState.swift */; };
+		4537D6BF1D922D97009F33DD /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4537D6BE1D922D97009F33DD /* Contants.swift */; };
 		456143491D91C2DF007690B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456143481D91C2DF007690B9 /* AppDelegate.swift */; };
-		4561434B1D91C2DF007690B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561434A1D91C2DF007690B9 /* ViewController.swift */; };
+		4561434B1D91C2DF007690B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561434A1D91C2DF007690B9 /* LoginViewController.swift */; };
 		4561434E1D91C2DF007690B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4561434C1D91C2DF007690B9 /* Main.storyboard */; };
 		456143501D91C2DF007690B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4561434F1D91C2DF007690B9 /* Assets.xcassets */; };
 		456143531D91C2DF007690B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456143511D91C2DF007690B9 /* LaunchScreen.storyboard */; };
@@ -38,9 +41,12 @@
 
 /* Begin PBXFileReference section */
 		1EDE1FDDA5E510D3DD40C22B /* Pods_CardlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4537D6BA1D922B35009F33DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4537D6BC1D922D0A009F33DD /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		4537D6BE1D922D97009F33DD /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		456143451D91C2DF007690B9 /* Cardly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		456143481D91C2DF007690B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4561434A1D91C2DF007690B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4561434A1D91C2DF007690B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4561434D1D91C2DF007690B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4561434F1D91C2DF007690B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		456143521D91C2DF007690B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -115,11 +121,14 @@
 			isa = PBXGroup;
 			children = (
 				456143481D91C2DF007690B9 /* AppDelegate.swift */,
-				4561434A1D91C2DF007690B9 /* ViewController.swift */,
+				4561434A1D91C2DF007690B9 /* LoginViewController.swift */,
+				4537D6BC1D922D0A009F33DD /* AppState.swift */,
 				4561434C1D91C2DF007690B9 /* Main.storyboard */,
 				4561434F1D91C2DF007690B9 /* Assets.xcassets */,
 				456143511D91C2DF007690B9 /* LaunchScreen.storyboard */,
 				456143541D91C2DF007690B9 /* Info.plist */,
+				4537D6BA1D922B35009F33DD /* GoogleService-Info.plist */,
+				4537D6BE1D922D97009F33DD /* Contants.swift */,
 			);
 			path = Cardly;
 			sourceTree = "<group>";
@@ -241,6 +250,7 @@
 				TargetAttributes = {
 					456143441D91C2DE007690B9 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = GYH3TK45ZC;
 						ProvisioningStyle = Automatic;
 					};
 					456143581D91C2DF007690B9 = {
@@ -281,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				456143531D91C2DF007690B9 /* LaunchScreen.storyboard in Resources */,
+				4537D6BB1D922B35009F33DD /* GoogleService-Info.plist in Resources */,
 				456143501D91C2DF007690B9 /* Assets.xcassets in Resources */,
 				4561434E1D91C2DF007690B9 /* Main.storyboard in Resources */,
 			);
@@ -430,8 +441,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4561434B1D91C2DF007690B9 /* ViewController.swift in Sources */,
+				4537D6BD1D922D0A009F33DD /* AppState.swift in Sources */,
+				4561434B1D91C2DF007690B9 /* LoginViewController.swift in Sources */,
 				456143491D91C2DF007690B9 /* AppDelegate.swift in Sources */,
+				4537D6BF1D922D97009F33DD /* Contants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +517,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -554,6 +568,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -584,7 +599,9 @@
 			baseConfigurationReference = ECBBAFF78B2D6651F90E7D23 /* Pods-Cardly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GYH3TK45ZC;
 				INFOPLIST_FILE = Cardly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qh4l.Cardly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -597,7 +614,9 @@
 			baseConfigurationReference = BA5C32983BF88C27EA833E73 /* Pods-Cardly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GYH3TK45ZC;
 				INFOPLIST_FILE = Cardly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qh4l.Cardly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -611,6 +630,20 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAuth\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseDatabase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleNetworkingUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
+				);
 				INFOPLIST_FILE = CardlyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qh4l.CardlyTests;
@@ -626,6 +659,20 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAuth\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseDatabase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleNetworkingUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
+				);
 				INFOPLIST_FILE = CardlyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qh4l.CardlyTests;

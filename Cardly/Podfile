@@ -5,6 +5,10 @@ target 'Cardly' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
+  pod 'Firebase'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+
   # Pods for Cardly
 
   target 'CardlyTests' do
@@ -16,9 +20,4 @@ target 'Cardly' do
     inherit! :search_paths
     # Pods for testing
   end
-
-  pod 'Firebase'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Database'
-
 end
