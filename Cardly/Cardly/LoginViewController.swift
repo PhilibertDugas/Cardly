@@ -42,6 +42,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap = UITapGestureRecognizer.init(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -72,6 +75,10 @@ class LoginViewController: UIViewController {
         AppState.sharedInstance.photoUrl = user?.photoURL
         AppState.sharedInstance.signedIn = true
         performSegue(withIdentifier: Constants.Segues.SignedIn, sender: nil)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
 

@@ -19,4 +19,8 @@ struct Constants {
     struct Notifications {
         static let BeaconFound = "foundBeaconUpdate"
     }
+    
+    struct Identifiers {
+        static let HomeCollectionViewCell = "homeCollectionViewCell"
+    }
 }

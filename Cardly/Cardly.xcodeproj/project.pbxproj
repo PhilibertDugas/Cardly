@@ -10,6 +10,7 @@
 		4537D6BB1D922B35009F33DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4537D6BA1D922B35009F33DD /* GoogleService-Info.plist */; };
 		4537D6BD1D922D0A009F33DD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4537D6BC1D922D0A009F33DD /* AppState.swift */; };
 		4537D6BF1D922D97009F33DD /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4537D6BE1D922D97009F33DD /* Contants.swift */; };
+		453829931D94A84000881068 /* business-cards-database.png in Resources */ = {isa = PBXBuildFile; fileRef = 453829921D94A84000881068 /* business-cards-database.png */; };
 		456143491D91C2DF007690B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456143481D91C2DF007690B9 /* AppDelegate.swift */; };
 		4561434B1D91C2DF007690B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561434A1D91C2DF007690B9 /* LoginViewController.swift */; };
 		4561434E1D91C2DF007690B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4561434C1D91C2DF007690B9 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		4537D6BA1D922B35009F33DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4537D6BC1D922D0A009F33DD /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		4537D6BE1D922D97009F33DD /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		453829921D94A84000881068 /* business-cards-database.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "business-cards-database.png"; sourceTree = "<group>"; };
 		456143451D91C2DF007690B9 /* Cardly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		456143481D91C2DF007690B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4561434A1D91C2DF007690B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				456143541D91C2DF007690B9 /* Info.plist */,
 				4537D6BA1D922B35009F33DD /* GoogleService-Info.plist */,
 				458D59B41D9367D800CD1208 /* Exterior-30.png */,
+				453829921D94A84000881068 /* business-cards-database.png */,
 				4561434F1D91C2DF007690B9 /* Assets.xcassets */,
 			);
 			path = Cardly;
@@ -287,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				453829931D94A84000881068 /* business-cards-database.png in Resources */,
 				456143531D91C2DF007690B9 /* LaunchScreen.storyboard in Resources */,
 				4537D6BB1D922B35009F33DD /* GoogleService-Info.plist in Resources */,
 				456143501D91C2DF007690B9 /* Assets.xcassets in Resources */,

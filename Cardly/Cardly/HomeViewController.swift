@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import CoreBluetooth
 
-class HomeViewController: UIViewController, CBPeripheralManagerDelegate {
+class HomeViewController: UIViewController {
     let regionUUID = UUID(uuidString: Constants.Bluetooth.RegionUUID)!
     
     var advertisedData = NSDictionary()
@@ -24,7 +24,6 @@ class HomeViewController: UIViewController, CBPeripheralManagerDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func launchBluetoothDevice() {
@@ -35,7 +34,39 @@ class HomeViewController: UIViewController, CBPeripheralManagerDelegate {
         advertisedData = beaconRegion.peripheralData(withMeasuredPower: nil)
         peripheralManager = CBPeripheralManager.init(delegate: self, queue: nil)
     }
+}
+
+extension HomeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
     
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Identifiers.HomeCollectionViewCell, for: indexPath)
+        return cell
+    }
+    
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 50.0, height: 50.0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+    }
+    
+
+}
+
+extension HomeViewController: CBPeripheralManagerDelegate {
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         switch peripheral.state {
         case CBManagerState.poweredOn:
@@ -51,5 +82,4 @@ class HomeViewController: UIViewController, CBPeripheralManagerDelegate {
     func peripheralManagerDidStartAdvertising(_ peripheral: CBPeripheralManager, error: Error?) {
         print("Started advertising minor: \(beaconRegion.minor) major: \(beaconRegion.major)")
     }
-
 }
