@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		237E76CC4B59845A64C65F38 /* Pods_CardlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACBCA11D05317C28151F9A37 /* Pods_CardlyTests.framework */; };
 		4515819F1D94BE4E00607714 /* notification.png in Resources */ = {isa = PBXBuildFile; fileRef = 4515819E1D94BE4E00607714 /* notification.png */; };
 		451581A31D94C00900607714 /* CardlyLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451581A21D94C00900607714 /* CardlyLayout.swift */; };
 		451581A61D94C4B900607714 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451581A51D94C4B800607714 /* Photo.swift */; };
@@ -28,6 +29,11 @@
 		458D59B51D9367D800CD1208 /* Exterior-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 458D59B41D9367D800CD1208 /* Exterior-30.png */; };
 		458D59B71D93680B00CD1208 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458D59B61D93680B00CD1208 /* HomeViewController.swift */; };
 		458D59BB1D936D3800CD1208 /* BeaconListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458D59BA1D936D3800CD1208 /* BeaconListener.swift */; };
+		A8C5EB475B4D4126D012BD42 /* Pods_CardlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F3FAA76A7B87908782F846 /* Pods_CardlyUITests.framework */; };
+		C59DA15F1D958A890018FB5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C59DA15E1D958A890018FB5B /* Assets.xcassets */; };
+		C59DA1611D95931F0018FB5B /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59DA1601D95931F0018FB5B /* ProfileTableViewController.swift */; };
+		C59DA1641D959F2A0018FB5B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59DA1631D959F2A0018FB5B /* CollectionViewCell.swift */; };
+		EE7B2291C345C59EBC2B297F /* Pods_Cardly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5522F8C6D52C5A0255EA5ECB /* Pods_Cardly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,10 +82,16 @@
 		458D59B61D93680B00CD1208 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		458D59BA1D936D3800CD1208 /* BeaconListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconListener.swift; sourceTree = "<group>"; };
 		47A4BA372C6BF0BE27072830 /* Pods-CardlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardlyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardlyUITests/Pods-CardlyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		50F3FAA76A7B87908782F846 /* Pods_CardlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5522F8C6D52C5A0255EA5ECB /* Pods_Cardly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cardly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58469818394FDC2C24E0497B /* Pods-CardlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardlyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardlyUITests/Pods-CardlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		622BD7346AA59277B70C9C88 /* Pods-CardlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardlyTests/Pods-CardlyTests.release.xcconfig"; sourceTree = "<group>"; };
+		ACBCA11D05317C28151F9A37 /* Pods_CardlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5C32983BF88C27EA833E73 /* Pods-Cardly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cardly/Pods-Cardly.release.xcconfig"; sourceTree = "<group>"; };
 		C08F3B634AD09EA12E8414B8 /* Pods-CardlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardlyTests/Pods-CardlyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C59DA15E1D958A890018FB5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C59DA1601D95931F0018FB5B /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		C59DA1631D959F2A0018FB5B /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		ECBBAFF78B2D6651F90E7D23 /* Pods-Cardly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cardly/Pods-Cardly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE7B2291C345C59EBC2B297F /* Pods_Cardly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				237E76CC4B59845A64C65F38 /* Pods_CardlyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,21 +116,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8C5EB475B4D4126D012BD42 /* Pods_CardlyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		451581A01D94BFBE00607714 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				4561434A1D91C2DF007690B9 /* LoginViewController.swift */,
-				458D59B61D93680B00CD1208 /* HomeViewController.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
 		451581A11D94BFCE00607714 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,22 +168,16 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
-		451581B51D94CC4500607714 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				456143511D91C2DF007690B9 /* LaunchScreen.storyboard */,
-				4561434C1D91C2DF007690B9 /* Main.storyboard */,
-			);
-			name = Storyboards;
-			sourceTree = "<group>";
-		};
 		451581B61D94D58D00607714 /* Global */ = {
 			isa = PBXGroup;
 			children = (
-				4537D6BE1D922D97009F33DD /* Contants.swift */,
-				458D59BA1D936D3800CD1208 /* BeaconListener.swift */,
+				C59DA1531D9588560018FB5B /* Libraries */,
+				451581AB1D94C62400607714 /* Views */,
+				451581A81D94C53200607714 /* Extensions */,
+				451581A41D94C49A00607714 /* Models */,
 				4537D6BC1D922D0A009F33DD /* AppState.swift */,
 				456143481D91C2DF007690B9 /* AppDelegate.swift */,
+				4537D6BE1D922D97009F33DD /* Contants.swift */,
 			);
 			name = Global;
 			sourceTree = "<group>";
@@ -208,13 +208,13 @@
 			isa = PBXGroup;
 			children = (
 				451581B61D94D58D00607714 /* Global */,
-				451581B51D94CC4500607714 /* Storyboards */,
 				451581B01D94C90000607714 /* Assets */,
-				451581AB1D94C62400607714 /* Views */,
-				451581A81D94C53200607714 /* Extensions */,
-				451581A01D94BFBE00607714 /* Controllers */,
-				451581A41D94C49A00607714 /* Models */,
-				451581A11D94BFCE00607714 /* Layout */,
+				C59DA1541D9588A70018FB5B /* TAB - Login */,
+				C59DA1571D9589110018FB5B /* TAB - Home */,
+				C59DA15A1D95896C0018FB5B /* TAB - Profile */,
+				C59DA15E1D958A890018FB5B /* Assets.xcassets */,
+				456143511D91C2DF007690B9 /* LaunchScreen.storyboard */,
+				4561434C1D91C2DF007690B9 /* Main.storyboard */,
 				456143541D91C2DF007690B9 /* Info.plist */,
 				4537D6BA1D922B35009F33DD /* GoogleService-Info.plist */,
 			);
@@ -242,8 +242,101 @@
 		537139A943C0CB48C9F9CB5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5522F8C6D52C5A0255EA5ECB /* Pods_Cardly.framework */,
+				ACBCA11D05317C28151F9A37 /* Pods_CardlyTests.framework */,
+				50F3FAA76A7B87908782F846 /* Pods_CardlyUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C59DA1531D9588560018FB5B /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				458D59BA1D936D3800CD1208 /* BeaconListener.swift */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		C59DA1541D9588A70018FB5B /* TAB - Login */ = {
+			isa = PBXGroup;
+			children = (
+				C59DA1561D9588DE0018FB5B /* Extensions */,
+				C59DA1551D9588D20018FB5B /* Views */,
+				4561434A1D91C2DF007690B9 /* LoginViewController.swift */,
+			);
+			name = "TAB - Login";
+			sourceTree = "<group>";
+		};
+		C59DA1551D9588D20018FB5B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C59DA1561D9588DE0018FB5B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		C59DA1571D9589110018FB5B /* TAB - Home */ = {
+			isa = PBXGroup;
+			children = (
+				451581A11D94BFCE00607714 /* Layout */,
+				C59DA1581D95892C0018FB5B /* Extensions */,
+				C59DA1591D9589320018FB5B /* Views */,
+				458D59B61D93680B00CD1208 /* HomeViewController.swift */,
+			);
+			name = "TAB - Home";
+			sourceTree = "<group>";
+		};
+		C59DA1581D95892C0018FB5B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		C59DA1591D9589320018FB5B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C59DA15A1D95896C0018FB5B /* TAB - Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C59DA1621D959F060018FB5B /* CollectionCells */,
+				C59DA15C1D9589EC0018FB5B /* Extensions */,
+				C59DA15B1D9589AA0018FB5B /* Views */,
+				C59DA1601D95931F0018FB5B /* ProfileTableViewController.swift */,
+			);
+			name = "TAB - Profile";
+			sourceTree = "<group>";
+		};
+		C59DA15B1D9589AA0018FB5B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C59DA15C1D9589EC0018FB5B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		C59DA1621D959F060018FB5B /* CollectionCells */ = {
+			isa = PBXGroup;
+			children = (
+				C59DA1631D959F2A0018FB5B /* CollectionViewCell.swift */,
+			);
+			name = CollectionCells;
 			sourceTree = "<group>";
 		};
 		CAF99883245D53BFE68071B9 /* Pods */ = {
@@ -382,6 +475,7 @@
 				4537D6BB1D922B35009F33DD /* GoogleService-Info.plist in Resources */,
 				456143501D91C2DF007690B9 /* Assets.xcassets in Resources */,
 				4561434E1D91C2DF007690B9 /* Main.storyboard in Resources */,
+				C59DA15F1D958A890018FB5B /* Assets.xcassets in Resources */,
 				458D59B51D9367D800CD1208 /* Exterior-30.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,7 +630,9 @@
 				4537D6BD1D922D0A009F33DD /* AppState.swift in Sources */,
 				451581AA1D94C53E00607714 /* UIImage+Decompression.swift in Sources */,
 				451581AF1D94C62F00607714 /* RoundedCornersView.swift in Sources */,
+				C59DA1611D95931F0018FB5B /* ProfileTableViewController.swift in Sources */,
 				458D59BB1D936D3800CD1208 /* BeaconListener.swift in Sources */,
+				C59DA1641D959F2A0018FB5B /* CollectionViewCell.swift in Sources */,
 				4561434B1D91C2DF007690B9 /* LoginViewController.swift in Sources */,
 				456143491D91C2DF007690B9 /* AppDelegate.swift in Sources */,
 				4537D6BF1D922D97009F33DD /* Contants.swift in Sources */,
