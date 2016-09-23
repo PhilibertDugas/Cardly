@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -92,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="140" y="130.88455772113943"/>
         </scene>
-        <!--Contacts-->
+        <!--Notifications-->
         <scene sceneID="gbC-Yt-a5l">
             <objects>
                 <viewController id="ek4-Ed-Ika" sceneMemberID="viewController">
@@ -105,61 +106,99 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contacts" image="business-cards-database.png" id="qO2-9p-aPq"/>
+                    <tabBarItem key="tabBarItem" title="Notifications" image="notification.png" id="qO2-9p-aPq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vi8-4o-FKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2002" y="458"/>
         </scene>
         <!--Home-->
-        <scene sceneID="fek-W0-ebs">
+        <scene sceneID="Uqm-Vj-TiU">
             <objects>
-                <viewController id="dFE-rE-HZc" customClass="HomeViewController" customModule="Cardly" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="osh-zY-zNT"/>
-                        <viewControllerLayoutGuide type="bottom" id="86O-AA-9hz"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5K3-AG-7Zj">
+                <collectionViewController id="9zk-I5-Nco" customClass="HomeViewController" customModule="Cardly" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="O3e-Zi-fhC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ykj-Nu-6j4">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kIN-8S-6Tc">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="homeCollectionViewCell" id="tJS-zC-Zl7">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="dFE-rE-HZc" id="lWU-XU-G2k"/>
-                                    <outlet property="delegate" destination="dFE-rE-HZc" id="FgM-93-q1A"/>
-                                </connections>
-                            </collectionView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="86O-AA-9hz" firstAttribute="top" secondItem="ykj-Nu-6j4" secondAttribute="bottom" id="0rC-Fu-uML"/>
-                            <constraint firstAttribute="trailing" secondItem="ykj-Nu-6j4" secondAttribute="trailing" id="LzZ-eM-uEm"/>
-                            <constraint firstItem="ykj-Nu-6j4" firstAttribute="leading" secondItem="5K3-AG-7Zj" secondAttribute="leading" id="SZA-4h-YAW"/>
-                            <constraint firstItem="ykj-Nu-6j4" firstAttribute="top" secondItem="osh-zY-zNT" secondAttribute="bottom" id="bfV-qq-sex"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="Exterior-30.png" id="v4p-VT-CvO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KyQ-JD-b2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <collectionViewLayout key="collectionViewLayout" id="Ifh-WC-WNE" customClass="CardlyLayout" customModule="Cardly" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="homeCollectionViewCell" id="tJS-zC-Zl7" customClass="AnnotatedPhotoCell" customModule="Cardly" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mjz-gU-0VQ" customClass="RoundedCornersView" customModule="Cardly" customModuleProvider="target">
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CPd-wg-guT">
+                                                    <color key="backgroundColor" red="0.10379079784755686" green="0.43647836538461537" blue="0.2208314076604897" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="118" id="xGt-oC-u7w"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYZ-8U-bp8">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="iXd-QK-ULK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxf-3v-ud6">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="13" id="r5S-c6-YbV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.12730318383018757" green="0.53535657051282048" blue="0.27085774334419144" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="CYZ-8U-bp8" firstAttribute="top" secondItem="CPd-wg-guT" secondAttribute="bottom" constant="3" id="2uA-vS-rfG"/>
+                                                <constraint firstAttribute="trailing" secondItem="CPd-wg-guT" secondAttribute="trailing" id="48k-VA-Y83"/>
+                                                <constraint firstItem="CPd-wg-guT" firstAttribute="leading" secondItem="mjz-gU-0VQ" secondAttribute="leading" id="HtD-1Z-yQn"/>
+                                                <constraint firstItem="CYZ-8U-bp8" firstAttribute="leading" secondItem="mjz-gU-0VQ" secondAttribute="leading" constant="8" id="JYX-xe-wtW"/>
+                                                <constraint firstAttribute="trailing" secondItem="dxf-3v-ud6" secondAttribute="trailing" constant="10" id="ZBa-dn-ToI"/>
+                                                <constraint firstItem="CPd-wg-guT" firstAttribute="top" secondItem="mjz-gU-0VQ" secondAttribute="top" id="mAW-WG-sDY"/>
+                                                <constraint firstAttribute="trailing" secondItem="CYZ-8U-bp8" secondAttribute="trailing" constant="8" id="wvj-99-5ja"/>
+                                                <constraint firstItem="dxf-3v-ud6" firstAttribute="top" secondItem="CYZ-8U-bp8" secondAttribute="bottom" constant="1" id="xWc-c3-Wv6"/>
+                                                <constraint firstItem="dxf-3v-ud6" firstAttribute="leading" secondItem="mjz-gU-0VQ" secondAttribute="leading" constant="8" id="xys-ny-PQi"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="mjz-gU-0VQ" firstAttribute="top" secondItem="tJS-zC-Zl7" secondAttribute="topMargin" id="64i-La-EYv"/>
+                                    <constraint firstItem="mjz-gU-0VQ" firstAttribute="bottom" secondItem="tJS-zC-Zl7" secondAttribute="bottomMargin" id="TIh-bW-cMv"/>
+                                    <constraint firstItem="mjz-gU-0VQ" firstAttribute="trailing" secondItem="tJS-zC-Zl7" secondAttribute="trailingMargin" id="gtt-vU-1n0"/>
+                                    <constraint firstItem="mjz-gU-0VQ" firstAttribute="leading" secondItem="tJS-zC-Zl7" secondAttribute="leadingMargin" id="hOp-5f-y4z"/>
+                                </constraints>
+                                <size key="customSize" width="180" height="180"/>
+                                <connections>
+                                    <outlet property="captionLabel" destination="CYZ-8U-bp8" id="SK6-mH-924"/>
+                                    <outlet property="commentLabel" destination="dxf-3v-ud6" id="ZNr-8V-xRg"/>
+                                    <outlet property="imageView" destination="CPd-wg-guT" id="Rsv-hx-CBk"/>
+                                    <outlet property="imageViewHeightLayoutConstraint" destination="xGt-oC-u7w" id="HDC-DY-H7T"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="9zk-I5-Nco" id="STb-kG-sHj"/>
+                            <outlet property="delegate" destination="9zk-I5-Nco" id="Wgt-Eo-K5V"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Home" image="Exterior-30.png" id="BtA-9z-XKF"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vcY-Ra-OEW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2000.8" y="-197.45127436281859"/>
+            <point key="canvasLocation" x="2001" y="-223"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ld6-zd-3OP">
@@ -171,7 +210,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="dFE-rE-HZc" kind="relationship" relationship="viewControllers" id="gR5-Vf-sYU"/>
+                        <segue destination="9zk-I5-Nco" kind="relationship" relationship="viewControllers" id="xAC-Cg-9DJ"/>
                         <segue destination="ek4-Ed-Ika" kind="relationship" relationship="viewControllers" id="2qO-em-CBQ"/>
                     </connections>
                 </tabBarController>
@@ -182,6 +221,6 @@
     </scenes>
     <resources>
         <image name="Exterior-30.png" width="30" height="30"/>
-        <image name="business-cards-database.png" width="32" height="32"/>
+        <image name="notification.png" width="32" height="32"/>
     </resources>
 </document>

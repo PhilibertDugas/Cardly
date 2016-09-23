@@ -9,8 +9,11 @@
 import UIKit
 import CoreLocation
 import CoreBluetooth
+import AVFoundation
 
-class HomeViewController: UIViewController {
+class HomeViewController: UICollectionViewController {
+    var photos = Photo.allPhotos()
+    
     let regionUUID = UUID(uuidString: Constants.Bluetooth.RegionUUID)!
     
     var advertisedData = NSDictionary()
@@ -19,6 +22,9 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let layout = collectionView?.collectionViewLayout as? CardlyLayout {
+            layout.delegate = self
+        }
         launchBluetoothDevice()
     }
 
@@ -36,34 +42,40 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+extension HomeViewController {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return photos.count
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Identifiers.HomeCollectionViewCell, for: indexPath)
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Identifiers.HomeCollectionViewCell, for: indexPath) as! AnnotatedPhotoCell
+        cell.photo = photos[indexPath.item]
         return cell
     }
-    
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
+
     
 }
 
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 50.0, height: 50.0)
+extension HomeViewController: CardlyLayoutDelegate {
+    func collectionView(collectionView:UICollectionView, heightForPhotoAtIndexPath indexPath: NSIndexPath,
+                        withWidth width: CGFloat) -> CGFloat {
+        let photo = photos[indexPath.item]
+        let boundingRect =  CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT))
+        let rect  = AVMakeRect(aspectRatio: photo.image.size, insideRect: boundingRect)
+        return rect.size.height
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+    func collectionView(collectionView: UICollectionView,
+                        heightForAnnotationAtIndexPath indexPath: NSIndexPath, withWidth width: CGFloat) -> CGFloat {
+        let annotationPadding = CGFloat(4)
+        let annotationHeaderHeight = CGFloat(17)
+        let photo = photos[indexPath.item]
+        let font = UIFont(name: "AvenirNext-Regular", size: 10)!
+        let commentHeight = photo.heightForComment(font: font, width: width)
+        let height = annotationPadding + annotationHeaderHeight + commentHeight + annotationPadding
+        return height
     }
-    
-
 }
 
 extension HomeViewController: CBPeripheralManagerDelegate {
