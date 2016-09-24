@@ -15,6 +15,7 @@ class HomeViewController: UICollectionViewController {
     var photos = Photo.allPhotos()
     
     let regionUUID = UUID(uuidString: Constants.Bluetooth.RegionUUID)!
+    let beaconListener = BeaconListener.init()
     
     var advertisedData = NSDictionary()
     var beaconRegion: CLBeaconRegion!
@@ -26,35 +27,41 @@ class HomeViewController: UICollectionViewController {
             layout.delegate = self
         }
         launchBluetoothDevice()
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.closeUsersUpdate), name: NSNotification.Name(rawValue: Constants.Notifications.BeaconFound), object: nil)
+        
+        beaconListener.startMonitoring()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
+}
+
+extension HomeViewController {
+    func closeUsersUpdate(_ notification: Notification) {
+        let minors = notification.userInfo!["data"] as! NSArray
+        print(minors)
+    }
     
     func launchBluetoothDevice() {
-        let beaconListener = BeaconListener.init()
-        beaconListener.startMonitoring()
-        
         beaconRegion = CLBeaconRegion(proximityUUID: regionUUID, major: 1, minor: 1, identifier: Constants.Bluetooth.BeaconIdentifier)
         advertisedData = beaconRegion.peripheralData(withMeasuredPower: nil)
         peripheralManager = CBPeripheralManager.init(delegate: self, queue: nil)
     }
 }
 
+
 extension HomeViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photos.count
     }
-    
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Identifiers.HomeCollectionViewCell, for: indexPath) as! AnnotatedPhotoCell
         cell.photo = photos[indexPath.item]
         return cell
     }
-
-    
 }
 
 extension HomeViewController: CardlyLayoutDelegate {
@@ -87,7 +94,7 @@ extension HomeViewController: CBPeripheralManagerDelegate {
         case CBManagerState.poweredOff:
             print("Bluetooth is powered off")
         default:
-            print("nothing")
+            print("Unknown bluetooth state")
         }
     }
     

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		237E76CC4B59845A64C65F38 /* Pods_CardlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACBCA11D05317C28151F9A37 /* Pods_CardlyTests.framework */; };
 		4515819F1D94BE4E00607714 /* notification.png in Resources */ = {isa = PBXBuildFile; fileRef = 4515819E1D94BE4E00607714 /* notification.png */; };
 		451581A31D94C00900607714 /* CardlyLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451581A21D94C00900607714 /* CardlyLayout.swift */; };
 		451581A61D94C4B900607714 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451581A51D94C4B800607714 /* Photo.swift */; };
@@ -19,6 +18,12 @@
 		4537D6BB1D922B35009F33DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4537D6BA1D922B35009F33DD /* GoogleService-Info.plist */; };
 		4537D6BD1D922D0A009F33DD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4537D6BC1D922D0A009F33DD /* AppState.swift */; };
 		4537D6BF1D922D97009F33DD /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4537D6BE1D922D97009F33DD /* Contants.swift */; };
+		45561F101D96FC61006F42C1 /* PageContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45561F0F1D96FC61006F42C1 /* PageContentController.swift */; };
+		45561F121D96FDA4006F42C1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45561F111D96FDA4006F42C1 /* RootViewController.swift */; };
+		45561F171D96FFC7006F42C1 /* page1.png in Resources */ = {isa = PBXBuildFile; fileRef = 45561F131D96FFC7006F42C1 /* page1.png */; };
+		45561F181D96FFC7006F42C1 /* page2.png in Resources */ = {isa = PBXBuildFile; fileRef = 45561F141D96FFC7006F42C1 /* page2.png */; };
+		45561F191D96FFC7006F42C1 /* page3.png in Resources */ = {isa = PBXBuildFile; fileRef = 45561F151D96FFC7006F42C1 /* page3.png */; };
+		45561F1A1D96FFC7006F42C1 /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = 45561F161D96FFC7006F42C1 /* page4.png */; };
 		456143491D91C2DF007690B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456143481D91C2DF007690B9 /* AppDelegate.swift */; };
 		4561434B1D91C2DF007690B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561434A1D91C2DF007690B9 /* LoginViewController.swift */; };
 		4561434E1D91C2DF007690B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4561434C1D91C2DF007690B9 /* Main.storyboard */; };
@@ -29,11 +34,8 @@
 		458D59B51D9367D800CD1208 /* Exterior-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 458D59B41D9367D800CD1208 /* Exterior-30.png */; };
 		458D59B71D93680B00CD1208 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458D59B61D93680B00CD1208 /* HomeViewController.swift */; };
 		458D59BB1D936D3800CD1208 /* BeaconListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458D59BA1D936D3800CD1208 /* BeaconListener.swift */; };
-		A8C5EB475B4D4126D012BD42 /* Pods_CardlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F3FAA76A7B87908782F846 /* Pods_CardlyUITests.framework */; };
-		C59DA15F1D958A890018FB5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C59DA15E1D958A890018FB5B /* Assets.xcassets */; };
 		C59DA1611D95931F0018FB5B /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59DA1601D95931F0018FB5B /* ProfileTableViewController.swift */; };
 		C59DA1641D959F2A0018FB5B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59DA1631D959F2A0018FB5B /* CollectionViewCell.swift */; };
-		EE7B2291C345C59EBC2B297F /* Pods_Cardly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5522F8C6D52C5A0255EA5ECB /* Pods_Cardly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		450FD67C1D97145F000748E0 /* Cardly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cardly.entitlements; sourceTree = "<group>"; };
 		4515819E1D94BE4E00607714 /* notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notification.png; sourceTree = "<group>"; };
 		451581A21D94C00900607714 /* CardlyLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardlyLayout.swift; sourceTree = "<group>"; };
 		451581A51D94C4B800607714 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -65,6 +68,12 @@
 		4537D6BA1D922B35009F33DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4537D6BC1D922D0A009F33DD /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		4537D6BE1D922D97009F33DD /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		45561F0F1D96FC61006F42C1 /* PageContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentController.swift; sourceTree = "<group>"; };
+		45561F111D96FDA4006F42C1 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		45561F131D96FFC7006F42C1 /* page1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page1.png; sourceTree = "<group>"; };
+		45561F141D96FFC7006F42C1 /* page2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page2.png; sourceTree = "<group>"; };
+		45561F151D96FFC7006F42C1 /* page3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page3.png; sourceTree = "<group>"; };
+		45561F161D96FFC7006F42C1 /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
 		456143451D91C2DF007690B9 /* Cardly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		456143481D91C2DF007690B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4561434A1D91C2DF007690B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -82,14 +91,10 @@
 		458D59B61D93680B00CD1208 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		458D59BA1D936D3800CD1208 /* BeaconListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconListener.swift; sourceTree = "<group>"; };
 		47A4BA372C6BF0BE27072830 /* Pods-CardlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardlyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardlyUITests/Pods-CardlyUITests.release.xcconfig"; sourceTree = "<group>"; };
-		50F3FAA76A7B87908782F846 /* Pods_CardlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5522F8C6D52C5A0255EA5ECB /* Pods_Cardly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cardly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58469818394FDC2C24E0497B /* Pods-CardlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardlyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardlyUITests/Pods-CardlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		622BD7346AA59277B70C9C88 /* Pods-CardlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardlyTests/Pods-CardlyTests.release.xcconfig"; sourceTree = "<group>"; };
-		ACBCA11D05317C28151F9A37 /* Pods_CardlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5C32983BF88C27EA833E73 /* Pods-Cardly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cardly/Pods-Cardly.release.xcconfig"; sourceTree = "<group>"; };
 		C08F3B634AD09EA12E8414B8 /* Pods-CardlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardlyTests/Pods-CardlyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C59DA15E1D958A890018FB5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C59DA1601D95931F0018FB5B /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		C59DA1631D959F2A0018FB5B /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		ECBBAFF78B2D6651F90E7D23 /* Pods-Cardly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cardly/Pods-Cardly.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,7 +105,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE7B2291C345C59EBC2B297F /* Pods_Cardly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +112,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				237E76CC4B59845A64C65F38 /* Pods_CardlyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +119,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8C5EB475B4D4126D012BD42 /* Pods_CardlyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +166,10 @@
 				4561434F1D91C2DF007690B9 /* Assets.xcassets */,
 				451581B31D94C91800607714 /* Photos.xcassets */,
 				451581B11D94C91000607714 /* Photos.plist */,
+				45561F131D96FFC7006F42C1 /* page1.png */,
+				45561F141D96FFC7006F42C1 /* page2.png */,
+				45561F151D96FFC7006F42C1 /* page3.png */,
+				45561F161D96FFC7006F42C1 /* page4.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -171,6 +177,7 @@
 		451581B61D94D58D00607714 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				450FD67C1D97145F000748E0 /* Cardly.entitlements */,
 				C59DA1531D9588560018FB5B /* Libraries */,
 				451581AB1D94C62400607714 /* Views */,
 				451581A81D94C53200607714 /* Extensions */,
@@ -212,7 +219,6 @@
 				C59DA1541D9588A70018FB5B /* TAB - Login */,
 				C59DA1571D9589110018FB5B /* TAB - Home */,
 				C59DA15A1D95896C0018FB5B /* TAB - Profile */,
-				C59DA15E1D958A890018FB5B /* Assets.xcassets */,
 				456143511D91C2DF007690B9 /* LaunchScreen.storyboard */,
 				4561434C1D91C2DF007690B9 /* Main.storyboard */,
 				456143541D91C2DF007690B9 /* Info.plist */,
@@ -242,9 +248,6 @@
 		537139A943C0CB48C9F9CB5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5522F8C6D52C5A0255EA5ECB /* Pods_Cardly.framework */,
-				ACBCA11D05317C28151F9A37 /* Pods_CardlyTests.framework */,
-				50F3FAA76A7B87908782F846 /* Pods_CardlyUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -263,6 +266,8 @@
 				C59DA1561D9588DE0018FB5B /* Extensions */,
 				C59DA1551D9588D20018FB5B /* Views */,
 				4561434A1D91C2DF007690B9 /* LoginViewController.swift */,
+				45561F0F1D96FC61006F42C1 /* PageContentController.swift */,
+				45561F111D96FDA4006F42C1 /* RootViewController.swift */,
 			);
 			name = "TAB - Login";
 			sourceTree = "<group>";
@@ -430,6 +435,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = GYH3TK45ZC;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					456143581D91C2DF007690B9 = {
 						CreatedOnToolsVersion = 8.0;
@@ -470,12 +480,15 @@
 			files = (
 				451581B41D94C91800607714 /* Photos.xcassets in Resources */,
 				4515819F1D94BE4E00607714 /* notification.png in Resources */,
+				45561F181D96FFC7006F42C1 /* page2.png in Resources */,
 				456143531D91C2DF007690B9 /* LaunchScreen.storyboard in Resources */,
 				451581B21D94C91000607714 /* Photos.plist in Resources */,
 				4537D6BB1D922B35009F33DD /* GoogleService-Info.plist in Resources */,
 				456143501D91C2DF007690B9 /* Assets.xcassets in Resources */,
+				45561F171D96FFC7006F42C1 /* page1.png in Resources */,
+				45561F191D96FFC7006F42C1 /* page3.png in Resources */,
 				4561434E1D91C2DF007690B9 /* Main.storyboard in Resources */,
-				C59DA15F1D958A890018FB5B /* Assets.xcassets in Resources */,
+				45561F1A1D96FFC7006F42C1 /* page4.png in Resources */,
 				458D59B51D9367D800CD1208 /* Exterior-30.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -629,11 +642,13 @@
 				451581A31D94C00900607714 /* CardlyLayout.swift in Sources */,
 				4537D6BD1D922D0A009F33DD /* AppState.swift in Sources */,
 				451581AA1D94C53E00607714 /* UIImage+Decompression.swift in Sources */,
+				45561F121D96FDA4006F42C1 /* RootViewController.swift in Sources */,
 				451581AF1D94C62F00607714 /* RoundedCornersView.swift in Sources */,
 				C59DA1611D95931F0018FB5B /* ProfileTableViewController.swift in Sources */,
 				458D59BB1D936D3800CD1208 /* BeaconListener.swift in Sources */,
 				C59DA1641D959F2A0018FB5B /* CollectionViewCell.swift in Sources */,
 				4561434B1D91C2DF007690B9 /* LoginViewController.swift in Sources */,
+				45561F101D96FC61006F42C1 /* PageContentController.swift in Sources */,
 				456143491D91C2DF007690B9 /* AppDelegate.swift in Sources */,
 				4537D6BF1D922D97009F33DD /* Contants.swift in Sources */,
 				451581AE1D94C62F00607714 /* AnnotatedPhotoCell.swift in Sources */,
@@ -791,6 +806,7 @@
 			baseConfigurationReference = ECBBAFF78B2D6651F90E7D23 /* Pods-Cardly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Cardly/Cardly.entitlements;
 				DEVELOPMENT_TEAM = GYH3TK45ZC;
 				INFOPLIST_FILE = Cardly/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -807,6 +823,7 @@
 			baseConfigurationReference = BA5C32983BF88C27EA833E73 /* Pods-Cardly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Cardly/Cardly.entitlements;
 				DEVELOPMENT_TEAM = GYH3TK45ZC;
 				INFOPLIST_FILE = Cardly/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
