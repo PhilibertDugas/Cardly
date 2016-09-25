@@ -9,6 +9,7 @@
 struct Constants {
     struct Segues {
         static let SignedIn = "onSignInCompleted"
+        static let Registered = "onRegisterCompleted"
     }
     
     struct Bluetooth {

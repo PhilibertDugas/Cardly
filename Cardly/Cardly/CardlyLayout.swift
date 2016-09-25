@@ -25,12 +25,11 @@ class CardlyLayoutAttributes: UICollectionViewLayoutAttributes {
         let copy = super.copy(with: zone) as! CardlyLayoutAttributes
         copy.photoHeight = photoHeight
         return copy
-
     }
     
     override func isEqual(_ object: Any?) -> Bool {
         if let attributes = object as? CardlyLayoutAttributes {
-            if( attributes.photoHeight == photoHeight  ) {
+            if attributes.photoHeight == photoHeight {
                 return super.isEqual(object)
             }
         }

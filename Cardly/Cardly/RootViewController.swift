@@ -30,10 +30,6 @@ class RootViewController: UIViewController {
         self.view.addSubview(pageViewController.view)
         self.pageViewController.didMove(toParentViewController: self)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }
 
 extension RootViewController: UIPageViewControllerDataSource {

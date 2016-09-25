@@ -10,9 +10,15 @@ import UIKit
 import CoreLocation
 import CoreBluetooth
 import AVFoundation
+import FirebaseDatabase
+import FirebaseStorage
 
 class HomeViewController: UICollectionViewController {
     var photos = Photo.allPhotos()
+    var closeUsers = [(NSMutableDictionary)]()
+    var databaseReference: FIRDatabaseReference!
+    var storageReference: FIRStorageReference!
+
     
     let regionUUID = UUID(uuidString: Constants.Bluetooth.RegionUUID)!
     let beaconListener = BeaconListener.init()
@@ -23,6 +29,9 @@ class HomeViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        databaseReference = FIRDatabase.database().reference()
+        storageReference = FIRStorage.storage().reference(forURL: "gs://cardly-86595.appspot.com")
+
         if let layout = collectionView?.collectionViewLayout as? CardlyLayout {
             layout.delegate = self
         }
@@ -31,21 +40,39 @@ class HomeViewController: UICollectionViewController {
         
         beaconListener.startMonitoring()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
 }
 
 extension HomeViewController {
     func closeUsersUpdate(_ notification: Notification) {
         let minors = notification.userInfo!["data"] as! NSArray
+        databaseReference.observeSingleEvent(of: .value, with:  { (snapshot) in
+            let dict = snapshot.value! as? NSDictionary
+            let users = dict?["users"] as! NSDictionary
+            var currentCloseUsers = [NSMutableDictionary]()
+            for (firebaseId, user) in users {
+                let userDict = user as! NSMutableDictionary
+                let minor = userDict["minor"]! as! String
+                if minors.contains(minor) {
+                    userDict.setValue(firebaseId as! String, forKey: "firebaseId")
+                    currentCloseUsers.append(userDict)
+                }
+            }
+            self.closeUsers = currentCloseUsers
+            self.collectionView?.reloadData()
+        })
         print(minors)
     }
     
+    func fetchUserImage(index: Int) -> UIImage? {
+        let user = closeUsers[index]
+        let urlRequest = URL(string: user["photoURL"] as! String)
+        let data = try? Data(contentsOf: urlRequest!)
+        let image = UIImage(data: data!)!
+        return image
+    }
+    
     func launchBluetoothDevice() {
-        beaconRegion = CLBeaconRegion(proximityUUID: regionUUID, major: 1, minor: 1, identifier: Constants.Bluetooth.BeaconIdentifier)
+        beaconRegion = CLBeaconRegion(proximityUUID: regionUUID, major: AppState.sharedInstance.major!, minor: AppState.sharedInstance.minor!, identifier: Constants.Bluetooth.BeaconIdentifier)
         advertisedData = beaconRegion.peripheralData(withMeasuredPower: nil)
         peripheralManager = CBPeripheralManager.init(delegate: self, queue: nil)
     }
@@ -54,12 +81,22 @@ extension HomeViewController {
 
 extension HomeViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photos.count
+        return closeUsers.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Identifiers.HomeCollectionViewCell, for: indexPath) as! AnnotatedPhotoCell
-        cell.photo = photos[indexPath.item]
+        
+        let user = closeUsers[indexPath.row]
+        
+        if let image = user["image"] as? UIImage {
+            cell.imageView.image = image
+        } else {
+            let image = fetchUserImage(index: indexPath.row)
+            user["image"] = image
+            cell.imageView.image = image
+        }
+        cell.captionLabel.text = user["username"] as? String
         return cell
     }
 }
@@ -67,9 +104,16 @@ extension HomeViewController {
 extension HomeViewController: CardlyLayoutDelegate {
     func collectionView(collectionView:UICollectionView, heightForPhotoAtIndexPath indexPath: NSIndexPath,
                         withWidth width: CGFloat) -> CGFloat {
-        let photo = photos[indexPath.item]
+        let user = closeUsers[indexPath.item]
         let boundingRect =  CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT))
-        let rect  = AVMakeRect(aspectRatio: photo.image.size, insideRect: boundingRect)
+        var rect: CGRect
+        if let image = user["image"] as? UIImage {
+            rect = AVMakeRect(aspectRatio: image.size, insideRect: boundingRect)
+        } else {
+            let image = fetchUserImage(index: indexPath.row)
+            user["imager"] = image
+            rect = AVMakeRect(aspectRatio: (image?.size)!, insideRect: boundingRect)
+        }
         return rect.size.height
     }
     
@@ -77,10 +121,11 @@ extension HomeViewController: CardlyLayoutDelegate {
                         heightForAnnotationAtIndexPath indexPath: NSIndexPath, withWidth width: CGFloat) -> CGFloat {
         let annotationPadding = CGFloat(4)
         let annotationHeaderHeight = CGFloat(17)
-        let photo = photos[indexPath.item]
+        let user = closeUsers[indexPath.item]
         let font = UIFont(name: "AvenirNext-Regular", size: 10)!
-        let commentHeight = photo.heightForComment(font: font, width: width)
-        let height = annotationPadding + annotationHeaderHeight + commentHeight + annotationPadding
+        let rect = NSString(string: user["username"] as! String).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        let nameHeight = ceil(rect.height)
+        let height = annotationPadding + annotationHeaderHeight + nameHeight + annotationPadding
         return height
     }
 }

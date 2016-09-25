@@ -26,19 +26,6 @@ class LoginViewController: UIViewController {
             self.signedIn(user: user)
         })
     }
-
-    @IBAction func registerPressed(_ sender: AnyObject) {
-        let email = emailField.text!
-        let password = passwordField.text!
-        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
-            if let error = error {
-                // TODO: We need to present an error message to the user
-                print(error.localizedDescription)
-                return
-            }
-            self.setDisplayName(user: user!)
-        })
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,23 +44,12 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func setDisplayName(user: FIRUser) {
-        let changeRequest = user.profileChangeRequest()
-        changeRequest.displayName = user.email?.components(separatedBy: "@")[0]
-        changeRequest.commitChanges { (error) in
-            if let error = error {
-                // TODO: We need to present an error message to the user
-                print(error.localizedDescription)
-                return
-            }
-            self.signedIn(user: FIRAuth.auth()?.currentUser)
-        }
-    }
-    
     func signedIn(user: FIRUser?) {
         AppState.sharedInstance.displayName = user?.displayName ?? user?.email
         AppState.sharedInstance.photoUrl = user?.photoURL
         AppState.sharedInstance.signedIn = true
+        AppState.sharedInstance.minor = UInt16(UserDefaults.standard.integer(forKey: "minor"))
+        AppState.sharedInstance.major = UInt16(UserDefaults.standard.integer(forKey: "major"))
         performSegue(withIdentifier: Constants.Segues.SignedIn, sender: nil)
     }
     

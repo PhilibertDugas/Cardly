@@ -22,9 +22,4 @@ class PageContentController: UIViewController {
         self.backgroundImage.image = UIImage(named: imageFile)
         self.titleLabel.text = titleText
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 }
