@@ -37,8 +37,16 @@
 		458D59B51D9367D800CD1208 /* Exterior-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 458D59B41D9367D800CD1208 /* Exterior-30.png */; };
 		458D59B71D93680B00CD1208 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458D59B61D93680B00CD1208 /* HomeViewController.swift */; };
 		458D59BB1D936D3800CD1208 /* BeaconListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458D59BA1D936D3800CD1208 /* BeaconListener.swift */; };
-		C59DA1611D95931F0018FB5B /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59DA1601D95931F0018FB5B /* ProfileTableViewController.swift */; };
+		827F5EFE59B70F45B5090C8F /* Pods_CardlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA078FEEB159A7B92ACDD5B8 /* Pods_CardlyTests.framework */; };
+		832008AF7F7913C6F8D21A40 /* Pods_CardlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F1A3F45497131C452970002 /* Pods_CardlyUITests.framework */; };
 		C59DA1641D959F2A0018FB5B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59DA1631D959F2A0018FB5B /* CollectionViewCell.swift */; };
+		C59DA1D71D9A31240018FB5B /* CategoryLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59DA1D61D9A31240018FB5B /* CategoryLayout.swift */; };
+		C59DA1DB1D9A31870018FB5B /* ProfileLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59DA1DA1D9A31870018FB5B /* ProfileLayout.swift */; };
+		C59DA1DD1D9A31960018FB5B /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59DA1DC1D9A31960018FB5B /* ProfileTableViewController.swift */; };
+		C59DA1E01D9A36DF0018FB5B /* ProfileCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59DA1DF1D9A36DF0018FB5B /* ProfileCollectionTableViewCell.swift */; };
+		C59DA1E21D9A3DD50018FB5B /* ProfileHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59DA1E11D9A3DD50018FB5B /* ProfileHeaderTableViewCell.swift */; };
+		C59DA1E41D9A3EAA0018FB5B /* ProfileEditionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59DA1E31D9A3EAA0018FB5B /* ProfileEditionTableViewCell.swift */; };
+		F9C4EBC0DB0FDD8FE8B30F6C /* Pods_Cardly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5BE91C68537A918E3B334 /* Pods_Cardly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,11 +106,19 @@
 		458D59BA1D936D3800CD1208 /* BeaconListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconListener.swift; sourceTree = "<group>"; };
 		47A4BA372C6BF0BE27072830 /* Pods-CardlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardlyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardlyUITests/Pods-CardlyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		58469818394FDC2C24E0497B /* Pods-CardlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardlyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardlyUITests/Pods-CardlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5CC5BE91C68537A918E3B334 /* Pods_Cardly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cardly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		622BD7346AA59277B70C9C88 /* Pods-CardlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardlyTests/Pods-CardlyTests.release.xcconfig"; sourceTree = "<group>"; };
+		7F1A3F45497131C452970002 /* Pods_CardlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA078FEEB159A7B92ACDD5B8 /* Pods_CardlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5C32983BF88C27EA833E73 /* Pods-Cardly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cardly/Pods-Cardly.release.xcconfig"; sourceTree = "<group>"; };
 		C08F3B634AD09EA12E8414B8 /* Pods-CardlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardlyTests/Pods-CardlyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C59DA1601D95931F0018FB5B /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		C59DA1631D959F2A0018FB5B /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		C59DA1D61D9A31240018FB5B /* CategoryLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryLayout.swift; path = "TAB - Profile/CategoryLayout.swift"; sourceTree = "<group>"; };
+		C59DA1DA1D9A31870018FB5B /* ProfileLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileLayout.swift; path = "TAB - Profile/ProfileLayout.swift"; sourceTree = "<group>"; };
+		C59DA1DC1D9A31960018FB5B /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileTableViewController.swift; path = "TAB - Profile/ProfileTableViewController.swift"; sourceTree = "<group>"; };
+		C59DA1DF1D9A36DF0018FB5B /* ProfileCollectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileCollectionTableViewCell.swift; path = "TAB - Profile/TableCells/ProfileCollectionTableViewCell.swift"; sourceTree = "<group>"; };
+		C59DA1E11D9A3DD50018FB5B /* ProfileHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileHeaderTableViewCell.swift; path = "TAB - Profile/TableCells/ProfileHeaderTableViewCell.swift"; sourceTree = "<group>"; };
+		C59DA1E31D9A3EAA0018FB5B /* ProfileEditionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileEditionTableViewCell.swift; path = "TAB - Profile/TableCells/ProfileEditionTableViewCell.swift"; sourceTree = "<group>"; };
 		ECBBAFF78B2D6651F90E7D23 /* Pods-Cardly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cardly/Pods-Cardly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C4EBC0DB0FDD8FE8B30F6C /* Pods_Cardly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				827F5EFE59B70F45B5090C8F /* Pods_CardlyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832008AF7F7913C6F8D21A40 /* Pods_CardlyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +283,9 @@
 		537139A943C0CB48C9F9CB5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5CC5BE91C68537A918E3B334 /* Pods_Cardly.framework */,
+				BA078FEEB159A7B92ACDD5B8 /* Pods_CardlyTests.framework */,
+				7F1A3F45497131C452970002 /* Pods_CardlyUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -331,10 +353,12 @@
 		C59DA15A1D95896C0018FB5B /* TAB - Profile */ = {
 			isa = PBXGroup;
 			children = (
+				C59DA1D51D9A30C10018FB5B /* Layouts */,
 				C59DA1621D959F060018FB5B /* CollectionCells */,
+				C59DA1DE1D9A368F0018FB5B /* TableCells */,
 				C59DA15C1D9589EC0018FB5B /* Extensions */,
 				C59DA15B1D9589AA0018FB5B /* Views */,
-				C59DA1601D95931F0018FB5B /* ProfileTableViewController.swift */,
+				C59DA1DC1D9A31960018FB5B /* ProfileTableViewController.swift */,
 			);
 			name = "TAB - Profile";
 			sourceTree = "<group>";
@@ -359,6 +383,25 @@
 				C59DA1631D959F2A0018FB5B /* CollectionViewCell.swift */,
 			);
 			name = CollectionCells;
+			sourceTree = "<group>";
+		};
+		C59DA1D51D9A30C10018FB5B /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				C59DA1DA1D9A31870018FB5B /* ProfileLayout.swift */,
+				C59DA1D61D9A31240018FB5B /* CategoryLayout.swift */,
+			);
+			name = Layouts;
+			sourceTree = "<group>";
+		};
+		C59DA1DE1D9A368F0018FB5B /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				C59DA1DF1D9A36DF0018FB5B /* ProfileCollectionTableViewCell.swift */,
+				C59DA1E11D9A3DD50018FB5B /* ProfileHeaderTableViewCell.swift */,
+				C59DA1E31D9A3EAA0018FB5B /* ProfileEditionTableViewCell.swift */,
+			);
+			name = TableCells;
 			sourceTree = "<group>";
 		};
 		CAF99883245D53BFE68071B9 /* Pods */ = {
@@ -654,15 +697,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59DA1D71D9A31240018FB5B /* CategoryLayout.swift in Sources */,
 				451581A61D94C4B900607714 /* Photo.swift in Sources */,
 				458D59B71D93680B00CD1208 /* HomeViewController.swift in Sources */,
+				C59DA1E41D9A3EAA0018FB5B /* ProfileEditionTableViewCell.swift in Sources */,
 				451581A31D94C00900607714 /* CardlyLayout.swift in Sources */,
 				4537D6BD1D922D0A009F33DD /* AppState.swift in Sources */,
 				451581AA1D94C53E00607714 /* UIImage+Decompression.swift in Sources */,
+				C59DA1E21D9A3DD50018FB5B /* ProfileHeaderTableViewCell.swift in Sources */,
+				C59DA1DD1D9A31960018FB5B /* ProfileTableViewController.swift in Sources */,
 				45561F121D96FDA4006F42C1 /* RootViewController.swift in Sources */,
 				451581AF1D94C62F00607714 /* RoundedCornersView.swift in Sources */,
-				C59DA1611D95931F0018FB5B /* ProfileTableViewController.swift in Sources */,
+				C59DA1DB1D9A31870018FB5B /* ProfileLayout.swift in Sources */,
 				458D59BB1D936D3800CD1208 /* BeaconListener.swift in Sources */,
+				C59DA1E01D9A36DF0018FB5B /* ProfileCollectionTableViewCell.swift in Sources */,
 				C59DA1641D959F2A0018FB5B /* CollectionViewCell.swift in Sources */,
 				4561434B1D91C2DF007690B9 /* LoginViewController.swift in Sources */,
 				4558D6F91D9729F4005B5A3E /* RegisterViewController.swift in Sources */,

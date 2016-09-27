@@ -34,18 +34,35 @@ class ProfileTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 3
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        switch indexPath.row
+        {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileHeader", for: indexPath)
+            return cell
+            break
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileEdition", for: indexPath)
+            return cell
+            break
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCollection", for: indexPath)
+            return cell
+            break
+        default:
+            break
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
